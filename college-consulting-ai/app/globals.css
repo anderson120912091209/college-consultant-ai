@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --text-primary: #6b7280;
+  --text-secondary: #9ca3af;
+  --text-light: #d1d5db;
+  --accent-green: #6b8e6b;
+  --accent-orange: #ed8936;
+  --border-gray: #e5e7eb;
+  --grid-gray: #f9fafb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-light: var(--text-light);
+  --color-accent-green: var(--accent-green);
+  --color-accent-orange: var(--accent-orange);
+  --color-border-gray: var(--border-gray);
+  --color-grid-gray: var(--grid-gray);
+  --font-cormorant: var(--font-cormorant);
+  --font-inter: var(--font-inter);
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "liga" 1, "calt" 1;
+  font-weight: 400;
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(229, 231, 235, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 231, 235, 0.6) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in { animation: fade-in 0.8s ease-out; }
+.animate-fade-in-delay { animation: fade-in 0.8s ease-out 0.2s both; }
+.animate-fade-in-delay-2 { animation: fade-in 0.8s ease-out 0.4s both; }
+
+.animate-slide-up { animation: slide-up 0.8s ease-out; }
+.animate-slide-up-delay { animation: slide-up 0.8s ease-out 0.2s both; }
+
+/* Custom Components */
+.btn-primary {
+  background-color: var(--accent-green);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5a7a5a;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-secondary);
+  background-color: var(--grid-gray);
+}
+
+.text-accent {
+  color: var(--accent-green);
+}
+
+.underline-accent {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-green);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Clean Section Styles */
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.section-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-link:hover {
+  color: var(--text-secondary);
+}
+
+/* Footer Styles */
+.footer-section {
+  border-top: 1px solid var(--border-gray);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-gray);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  color: var(--accent-green);
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.company-description {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.legal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legal-link {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+  color: var(--text-secondary);
+}
