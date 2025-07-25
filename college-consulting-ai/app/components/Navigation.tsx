@@ -33,7 +33,7 @@ export default function Navigation() {
             <Link href="/tutors" className="nav-link-luxury text-xs">
               Tutors
             </Link>
-            <Link href="/contact" className="nav-link-luxury text-xs">
+            <Link href="/contact" className="btn-luxury-primary text-xs">
               Get Started
             </Link>
           </div>

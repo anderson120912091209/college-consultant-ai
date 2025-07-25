@@ -12,17 +12,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="text-center relative z-10">
             <div className="animate-fade-in-luxury">
-              <h1 className="headline-luxury slogan-khmer text-6xl md:text-7xl mb-12">
-                We cost down elite college prep
+              <h1 className="headline-luxury slogan-khmer letter-spacing-0 text-6xl md:text-7xl mb-12">
+                Elite college prep, now cost down. 
               </h1>
               <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-                Where artificial intelligence evaluates your potential and expert tutors guide you to success. 
-                The future of college admissions is here.
+                We combine artificial intelligence and tutors to make elite college prep experiences more accessible.
               </p>
             </div>
-
-            {/* Luxury AI Icon */}
-            <div className="ai-icon-luxury animate-fade-in-delay-luxury"></div>
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-fade-in-delay-2-luxury">
               <button className="btn-luxury-primary text-lg">
