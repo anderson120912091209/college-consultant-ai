@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ScholarAI - Your AI College Admissions Companion",
-  description: "Get personalized college guidance, resume evaluation, and discover opportunities with AI-powered insights from admissions experts.",
+  title: "Common Prep - AI-Powered College Admissions & Tutoring",
+  description: "Get AI-powered college admissions evaluation, diagnostic insights, and personalized tutoring to maximize your chances of getting into your dream university.",
 };
 
 export default function RootLayout({
