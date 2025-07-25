@@ -1,7 +1,12 @@
+'use client';
+
 import Link from "next/link";
 import Navigation from "./components/Navigation";
+import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
 
-export default function Home() {
+function HomeContent() {
+  const { t } = useLanguage();
+  
   return (
     <div className="luxury-background">
       {/* Navigation Component */}
@@ -13,24 +18,24 @@ export default function Home() {
           <div className="text-center relative z-10">
             <div className="animate-fade-in-luxury">
               <h1 className="headline-luxury slogan-khmer letter-spacing-0 text-6xl md:text-7xl mb-12">
-                Elite college prep, now cost down. 
+                {t('heroTitle')}
               </h1>
               <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-                We combine artificial intelligence and tutors to make elite college prep experiences more accessible.
+                {t('heroDescription')}
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-fade-in-delay-2-luxury">
               <button className="btn-luxury-primary text-lg">
-                Start AI Evaluation
+                {t('startAiEvaluation')}
               </button>
               <Link href="/diagnostic" className="btn-luxury-secondary text-lg">
-                Run Diagnostic
+                {t('runDiagnostic')}
               </Link>
             </div>
 
             <div className="animate-fade-in-delay-2-luxury">
-              <p className="text-sm text-text-light mb-6 font-light">Trusted by students from</p>
+              <p className="text-sm text-text-light mb-6 font-light">{t('trustedBy')}</p>
               <div className="flex justify-center space-x-12 opacity-60">
                 {['Harvard', 'Stanford', 'MIT', 'Yale', 'Princeton'].map((school) => (
                   <span key={school} className="text-sm font-light text-text-secondary">
@@ -50,19 +55,19 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
               <div className="animate-fade-in-luxury">
                 <div className="stat-number-luxury">95%</div>
-                <div className="text-text-secondary font-light text-lg">Success Rate</div>
+                <div className="text-text-secondary font-light text-lg">{t('successRate')}</div>
               </div>
               <div className="animate-fade-in-luxury" style={{animationDelay: '0.1s'}}>
                 <div className="stat-number-luxury">10K+</div>
-                <div className="text-text-secondary font-light text-lg">Students Helped</div>
+                <div className="text-text-secondary font-light text-lg">{t('studentsHelped')}</div>
               </div>
               <div className="animate-fade-in-luxury" style={{animationDelay: '0.2s'}}>
                 <div className="stat-number-luxury">500+</div>
-                <div className="text-text-secondary font-light text-lg">Universities</div>
+                <div className="text-text-secondary font-light text-lg">{t('universities')}</div>
               </div>
               <div className="animate-fade-in-luxury" style={{animationDelay: '0.3s'}}>
                 <div className="stat-number-luxury">4.9/5</div>
-                <div className="text-text-secondary font-light text-lg">Student Rating</div>
+                <div className="text-text-secondary font-light text-lg">{t('studentRating')}</div>
               </div>
             </div>
           </div>
@@ -73,10 +78,9 @@ export default function Home() {
       <section className="py-32 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 animate-slide-up-luxury">
-            <h2 className="headline-luxury text-5xl mb-8">AI-Powered Evaluation</h2>
+            <h2 className="headline-luxury text-5xl mb-8">{t('aiPoweredEvaluation')}</h2>
             <p className="text-xl text-text-secondary max-w-4xl mx-auto font-light">
-              Our advanced AI analyzes thousands of successful applications to give you
-              precise insights into your college admission chances.
+              {t('aiEvaluationDescription')}
             </p>
           </div>
 
@@ -88,11 +92,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-light text-2xl text-accent-dark mb-6 text-center">
-                Acceptance Probability
+                {t('acceptanceProbability')}
               </h3>
               <p className="text-text-secondary leading-relaxed text-center font-light">
-                Get precise calculations of your admission chances at each university
-                based on your unique profile and achievements.
+                {t('acceptanceProbabilityDesc')}
               </p>
             </div>
 
@@ -103,11 +106,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-light text-2xl text-accent-dark mb-6 text-center">
-                Smart Matching
+                {t('smartMatching')}
               </h3>
               <p className="text-text-secondary leading-relaxed text-center font-light">
-                AI matches you with universities where you have the highest probability
-                of acceptance and connects you with specialized tutors.
+                {t('smartMatchingDesc')}
               </p>
             </div>
 
@@ -118,11 +120,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-light text-2xl text-accent-dark mb-6 text-center">
-                Performance Analytics
+                {t('performanceAnalytics')}
               </h3>
               <p className="text-text-secondary leading-relaxed text-center font-light">
-                Track your application progress with detailed analytics and insights
-                to optimize your strategy for maximum success.
+                {t('performanceAnalyticsDesc')}
               </p>
             </div>
           </div>
@@ -133,10 +134,9 @@ export default function Home() {
       <section className="py-32 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 animate-slide-up-luxury">
-            <h2 className="headline-luxury text-5xl mb-8">Comprehensive Diagnostic</h2>
+            <h2 className="headline-luxury text-5xl mb-8">{t('comprehensiveDiagnostic')}</h2>
             <p className="text-xl text-text-secondary max-w-4xl mx-auto font-light">
-              Identify your strengths and weaknesses with our AI-powered diagnostic tools
-              that provide actionable insights for improvement.
+              {t('diagnosticDescription')}
             </p>
           </div>
 
@@ -148,11 +148,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-light text-2xl text-accent-dark mb-6 text-center">
-                Resume Analysis
+                {t('resumeAnalysis')}
               </h3>
               <p className="text-text-secondary leading-relaxed text-center font-light">
-                AI-powered evaluation of your resume with specific recommendations
-                that our expert tutors will help you implement effectively.
+                {t('resumeAnalysisDesc')}
               </p>
             </div>
 
@@ -163,11 +162,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-light text-2xl text-accent-dark mb-6 text-center">
-                Essay Feedback
+                {t('essayFeedback')}
               </h3>
               <p className="text-text-secondary leading-relaxed text-center font-light">
-                Detailed analysis of your essays with actionable feedback that our
-                expert tutors will guide you through improving step by step.
+                {t('essayFeedbackDesc')}
               </p>
             </div>
           </div>
@@ -178,37 +176,34 @@ export default function Home() {
       <section className="py-32 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 animate-slide-up-luxury">
-            <h2 className="headline-luxury text-5xl mb-8">Expert Tutors Await</h2>
+            <h2 className="headline-luxury text-5xl mb-8">{t('expertTutorsAwait')}</h2>
             <p className="text-xl text-text-secondary max-w-4xl mx-auto font-light">
-              After your AI evaluation, connect with specialized tutors who know exactly
-              how to address your weaknesses and maximize your chances of acceptance.
+              {t('tutorsDescription')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="luxury-card animate-fade-in-delay-luxury">
               <h3 className="font-light text-3xl text-accent-dark mb-8 text-center">
-                Personalized Guidance
+                {t('personalizedGuidance')}
               </h3>
               <p className="text-text-secondary leading-relaxed mb-10 text-center font-light">
-                Our expert tutors create customized strategies based on your AI evaluation
-                to maximize your chances of acceptance at your target universities.
+                {t('personalizedGuidanceDesc')}
               </p>
               <div className="text-center">
-                <button className="btn-luxury-primary">Meet Your Tutor</button>
+                <button className="btn-luxury-primary">{t('meetYourTutor')}</button>
               </div>
             </div>
 
             <div className="luxury-card animate-fade-in-delay-luxury" style={{animationDelay: '0.2s'}}>
               <h3 className="font-light text-3xl text-accent-dark mb-8 text-center">
-                Proven Results
+                {t('provenResults')}
               </h3>
               <p className="text-text-secondary leading-relaxed mb-10 text-center font-light">
-                Our AI + tutor combination has helped thousands of students get into their
-                dream schools. Join the success stories with our data-driven approach.
+                {t('provenResultsDesc')}
               </p>
               <div className="text-center">
-                <button className="btn-luxury-secondary">View Success Stories</button>
+                <button className="btn-luxury-secondary">{t('viewSuccessStories')}</button>
               </div>
             </div>
           </div>
@@ -219,17 +214,16 @@ export default function Home() {
       <section className="py-32 px-8">
         <div className="max-w-5xl mx-auto text-center">
           <div className="luxury-card animate-fade-in-delay-2-luxury">
-            <h2 className="headline-luxury text-5xl mb-8">Ready to Transform Your Application?</h2>
+            <h2 className="headline-luxury text-5xl mb-8">{t('readyToTransform')}</h2>
             <p className="text-xl text-text-secondary mb-12 font-light">
-              Start with our AI evaluation, get your comprehensive diagnostic report,
-              and connect with expert tutors who know how to get you in.
+              {t('ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <button className="btn-luxury-primary text-lg">
-                Start Free Evaluation
+                {t('startFreeEvaluation')}
               </button>
               <Link href="/learn-more" className="btn-luxury-secondary text-lg">
-                Learn More
+                {t('learnMore')}
               </Link>
             </div>
           </div>
@@ -241,51 +235,58 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div>
-              <div className="font-light text-2xl text-white mb-6">COMMON PREP</div>
+              <div className="font-light text-2xl text-white mb-6">{t('companyName')}</div>
               <p className="text-gray-300 leading-relaxed font-light">
-                AI-powered college admissions evaluation and expert tutoring to maximize
-                your chances of getting into your dream university.
+                {t('footerDescription')}
               </p>
             </div>
             <div>
-              <h3 className="font-light text-white mb-6">Services</h3>
+              <h3 className="font-light text-white mb-6">{t('servicesFooter')}</h3>
               <div className="space-y-3">
-                <Link href="/ai-evaluation" className="block text-gray-300 hover:text-white transition-colors font-light">AI Evaluation</Link>
-                <Link href="/diagnostic" className="block text-gray-300 hover:text-white transition-colors font-light">Diagnostic Tools</Link>
-                <Link href="/tutoring" className="block text-gray-300 hover:text-white transition-colors font-light">Expert Tutoring</Link>
-                <Link href="/consulting" className="block text-gray-300 hover:text-white transition-colors font-light">Admissions Consulting</Link>
+                <Link href="/ai-evaluation" className="block text-gray-300 hover:text-white transition-colors font-light">{t('aiEvaluationFooter')}</Link>
+                <Link href="/diagnostic" className="block text-gray-300 hover:text-white transition-colors font-light">{t('diagnosticToolsFooter')}</Link>
+                <Link href="/tutoring" className="block text-gray-300 hover:text-white transition-colors font-light">{t('expertTutoringFooter')}</Link>
+                <Link href="/consulting" className="block text-gray-300 hover:text-white transition-colors font-light">{t('admissionsConsultingFooter')}</Link>
               </div>
             </div>
             <div>
-              <h3 className="font-light text-white mb-6">Company</h3>
+              <h3 className="font-light text-white mb-6">{t('companyFooter')}</h3>
               <div className="space-y-3">
-                <Link href="/about" className="block text-gray-300 hover:text-white transition-colors font-light">About Us</Link>
-                <Link href="/tutors" className="block text-gray-300 hover:text-white transition-colors font-light">Our Tutors</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors font-light">Contact</Link>
-                <Link href="/support" className="block text-gray-300 hover:text-white transition-colors font-light">Support</Link>
+                <Link href="/about" className="block text-gray-300 hover:text-white transition-colors font-light">{t('aboutUsFooter')}</Link>
+                <Link href="/tutors" className="block text-gray-300 hover:text-white transition-colors font-light">{t('ourTutorsFooter')}</Link>
+                <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors font-light">{t('contactFooter')}</Link>
+                <Link href="/support" className="block text-gray-300 hover:text-white transition-colors font-light">{t('supportFooter')}</Link>
               </div>
             </div>
             <div>
-              <h3 className="font-light text-white mb-6">Resources</h3>
+              <h3 className="font-light text-white mb-6">{t('resourcesFooter')}</h3>
               <div className="space-y-3">
-                <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors font-light">Blog</Link>
-                <Link href="/guides" className="block text-gray-300 hover:text-white transition-colors font-light">Admissions Guides</Link>
-                <Link href="/success-stories" className="block text-gray-300 hover:text-white transition-colors font-light">Success Stories</Link>
-                <Link href="/faq" className="block text-gray-300 hover:text-white transition-colors font-light">FAQ</Link>
+                <Link href="/blog" className="block text-gray-300 hover:text-white transition-colors font-light">{t('blogFooter')}</Link>
+                <Link href="/guides" className="block text-gray-300 hover:text-white transition-colors font-light">{t('admissionsGuidesFooter')}</Link>
+                <Link href="/success-stories" className="block text-gray-300 hover:text-white transition-colors font-light">{t('successStoriesFooter')}</Link>
+                <Link href="/faq" className="block text-gray-300 hover:text-white transition-colors font-light">{t('faqFooter')}</Link>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0 font-light">
-              © 2025 Common Prep. All rights reserved.
+              {t('allRightsReserved')}
             </div>
             <div className="flex space-x-8 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-white transition-colors font-light">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors font-light">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors font-light">{t('privacyPolicy')}</Link>
+              <Link href="/terms" className="hover:text-white transition-colors font-light">{t('termsOfService')}</Link>
             </div>
           </div>
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <LanguageProvider>
+      <HomeContent />
+    </LanguageProvider>
   );
 }

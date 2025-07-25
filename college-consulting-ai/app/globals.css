@@ -45,25 +45,31 @@ body {
   letter-spacing: -0.02em !important;
 }
 
-/* Luxury Background with Sandpaper Noise Texture over Gradients */
+/* Luxury Background with Ultra-Blurred Gradients */
 .luxury-background {
   background: 
     /* High-opacity noise texture overlay for sandpaper effect */
     url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E"),
-    /* Green blob gradients scattered across screen */
-    radial-gradient(circle 600px at 15% 25%, #8FBC8F 0%, rgba(143, 188, 143, 0.6) 40%, transparent 80%),
-    radial-gradient(circle 500px at 85% 15%, #9ACD32 0%, rgba(154, 205, 50, 0.5) 35%, transparent 75%),
-    radial-gradient(circle 700px at 25% 75%, #6B8E23 0%, rgba(107, 142, 35, 0.4) 45%, transparent 85%),
-    radial-gradient(circle 450px at 75% 80%, #90EE90 0%, rgba(144, 238, 144, 0.5) 38%, transparent 78%),
-    radial-gradient(circle 550px at 10% 60%, #8FBC8F 0%, rgba(143, 188, 143, 0.4) 42%, transparent 82%),
-    radial-gradient(circle 480px at 90% 45%, #9ACD32 0%, rgba(154, 205, 50, 0.6) 40%, transparent 80%),
-    radial-gradient(circle 380px at 50% 25%, #6B8E23 0%, rgba(107, 142, 35, 0.3) 36%, transparent 76%),
-    radial-gradient(circle 520px at 80% 85%, #90EE90 0%, rgba(144, 238, 144, 0.4) 44%, transparent 84%),
-    /* White mixing gradients for softness */
-    radial-gradient(circle 800px at 40% 40%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, transparent 90%),
-    radial-gradient(circle 600px at 70% 30%, rgba(248, 248, 248, 0.7) 0%, rgba(248, 248, 248, 0.2) 45%, transparent 85%),
-    /* Milky yellow base with full coverage */
-    radial-gradient(circle 1200px at 50% 50%, #FFFACD 0%, #FFF8DC 30%, #FFFFF0 60%, #FFFEF7 100%);
+    /* Ultra-blurred green gradients with balanced opacity */
+    radial-gradient(circle 1500px at 15% 25%, rgba(143, 188, 143, 0.12) 0%, rgba(143, 188, 143, 0.06) 30%, transparent 70%),
+    radial-gradient(circle 1400px at 85% 15%, rgba(154, 205, 50, 0.10) 0%, rgba(154, 205, 50, 0.05) 35%, transparent 75%),
+    radial-gradient(circle 1600px at 25% 75%, rgba(107, 142, 35, 0.08) 0%, rgba(107, 142, 35, 0.04) 45%, transparent 85%),
+    radial-gradient(circle 1300px at 75% 80%, rgba(144, 238, 144, 0.11) 0%, rgba(144, 238, 144, 0.06) 38%, transparent 78%),
+    radial-gradient(circle 1450px at 10% 60%, rgba(143, 188, 143, 0.09) 0%, rgba(143, 188, 143, 0.05) 42%, transparent 82%),
+    radial-gradient(circle 1350px at 90% 45%, rgba(154, 205, 50, 0.12) 0%, rgba(154, 205, 50, 0.07) 40%, transparent 80%),
+    radial-gradient(circle 1200px at 50% 25%, rgba(107, 142, 35, 0.07) 0%, rgba(107, 142, 35, 0.03) 36%, transparent 76%),
+    radial-gradient(circle 1550px at 80% 85%, rgba(144, 238, 144, 0.10) 0%, rgba(144, 238, 144, 0.06) 44%, transparent 84%),
+    /* Additional overlapping layers for more blending */
+    radial-gradient(circle 1800px at 30% 40%, rgba(143, 188, 143, 0.08) 0%, rgba(143, 188, 143, 0.04) 50%, transparent 90%),
+    radial-gradient(circle 1700px at 70% 60%, rgba(154, 205, 50, 0.09) 0%, rgba(154, 205, 50, 0.05) 45%, transparent 85%),
+    radial-gradient(circle 1900px at 20% 80%, rgba(107, 142, 35, 0.06) 0%, rgba(107, 142, 35, 0.03) 55%, transparent 95%),
+    radial-gradient(circle 1650px at 80% 20%, rgba(144, 238, 144, 0.09) 0%, rgba(144, 238, 144, 0.05) 40%, transparent 80%),
+    /* Ultra-soft white mixing gradients */
+    radial-gradient(circle 2000px at 40% 40%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, transparent 90%),
+    radial-gradient(circle 1800px at 70% 30%, rgba(248, 248, 248, 0.35) 0%, rgba(248, 248, 248, 0.15) 45%, transparent 85%),
+    radial-gradient(circle 2200px at 60% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 60%, transparent 95%),
+    /* Milky yellow base with ultra-soft coverage */
+    radial-gradient(circle 2500px at 50% 50%, rgba(255, 250, 205, 0.6) 0%, rgba(255, 248, 220, 0.4) 30%, rgba(255, 255, 240, 0.2) 60%, rgba(255, 254, 247, 0.1) 100%);
   background-size: 
     200px 200px,
     100% 100%,
@@ -76,8 +82,14 @@ body {
     100% 100%,
     100% 100%,
     100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
     100% 100%;
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -143,9 +155,81 @@ body {
   width: 100%;
 }
 
-.nav-link-luxury:hover {
+/* Subtle Navigation Links */
+.nav-link-premium {
+  font-weight: 300;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+  letter-spacing: 0.02em;
+  padding: 12px 18px;
+}
+
+.nav-link-premium:hover {
   color: var(--accent-dark);
-  background: rgba(186, 241, 165, 0.2);
+}
+
+/* Simple Get Started Button */
+.btn-premium-cta {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-premium-cta:hover {
+  background: var(--accent-green);
+  color: black;
+}
+
+/* Rounded Language Switcher with Green Active State */
+.language-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 3px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.language-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 38px;
+  z-index: 1;
+}
+
+.language-option.active {
+  color: var(--accent-dark);
+  background: var(--accent-green);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.language-option:not(.active):hover {
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 /* Luxury Buttons */
@@ -177,11 +261,6 @@ body {
 
 .btn-luxury-primary:hover::before {
   left: 0;
-}
-
-.btn-luxury-primary:hover {
-  color: var(--accent-dark);
-  background: var(--accent-green);
 }
 
 .btn-luxury-secondary {
